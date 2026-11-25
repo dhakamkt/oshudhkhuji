@@ -1,0 +1,37 @@
+ওষুধখুঁজি — ওয়েবসাইটের ফাইল
+================================
+
+ফাইলগুলো:
+  index.html  – পুরো ওয়েবসাইট (ডিজাইন, পাতা, কোড)
+  meds.json   – সব ওষুধের ডেটা (২৬,৬৫৩টি ব্র্যান্ড)
+  ads.txt     – Google AdSense-এর জন্য
+  robots.txt  – Google-কে সাইট পড়তে দেওয়ার অনুমতি
+  .htaccess   – Hostinger সার্ভারের সেটিংস (গতি, HTTPS)
+               (এটা লুকানো ফাইল; File Manager-এ না দেখালে "Show hidden files" চালু করুন)
+
+আপলোডের আগে ২টি জিনিস বদলান
+---------------------------------
+১) index.html খুলুন, "const SITE" লেখাটা খুঁজুন। সেখানে বসান:
+     domain:    'yourdomain.com'
+     email:     'contact@yourdomain.com'
+     facebook:  'https://facebook.com/yourpage'   (না থাকলে খালি রাখুন)
+     adsClient: 'ca-pub-XXXXXXXXXXXXXXXX'         (AdSense অনুমোদনের পর)
+
+২) ads.txt খুলুন, pub-0000000000000000 এর জায়গায় আপনার আসল AdSense নম্বর বসান
+   (ca-pub- এর পরের অংশ, যেমন pub-1234567890123456)।
+
+Hostinger-এ আপলোড
+------------------
+১) hPanel → Websites → Dashboard → File Manager → public_html খুলুন
+২) আগের default.php / index.php থাকলে মুছে দিন
+৩) Upload → এই zip ফাইলটা দিন → রাইট-ক্লিক → Extract → public_html
+   (ফাইলগুলো যেন সরাসরি public_html-এর ভেতরে থাকে, কোনো সাব-ফোল্ডারে নয়)
+৪) Security → SSL থেকে ফ্রি SSL চালু করুন
+৫) ব্রাউজারে আপনার ডোমেইন খুলে দেখুন
+
+AdSense-এ আবেদনের আগে চেকলিস্ট
+-------------------------------
+[ ] SITE-এ ইমেইল বসানো হয়েছে (Contact পাতায় দেখা যাচ্ছে)
+[ ] yourdomain.com/ads.txt খুললে ফাইলটা দেখা যাচ্ছে
+[ ] About, Privacy, Terms, Contact পাতা ফুটার থেকে খোলা যাচ্ছে
+[ ] একজন ফার্মাসিস্ট বাংলা তথ্যগুলো দেখে নিয়েছেন (প্রস্তাবিত)

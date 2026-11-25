@@ -1,0 +1,24 @@
+# Correct type for the data file
+AddType application/json .json
+AddDefaultCharset UTF-8
+
+# Compress text files (faster loading)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json
+</IfModule>
+
+# Browser caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Force HTTPS (works after SSL is installed in Hostinger)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+ErrorDocument 404 /index.html

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f5f4a">
+<title>ওষুধ খুঁজি – বাংলাদেশের সব ওষুধ, বিকল্প ব্র্যান্ড ও দাম</title>
+<meta name="description" content="বাংলাদেশের ২৬,০০০+ ওষুধের ব্র্যান্ড, জেনেরিক, কোম্পানি ও দাম। একই ওষুধের সব বিকল্প কোম্পানির ব্র্যান্ড, কাজ, পার্শ্বপ্রতিক্রিয়া ও সতর্কতা।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f3;--card:#fff;--ink:#17231f;--muted:#66736e;--line:#e2e7e3;--brand:#0f5f4a;--brand2:#e07a1f;--chip:#e9f2ee;--warn:#fff7ed;--warnline:#fed7aa}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Hind Siliguri",system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.5}
+a{color:var(--brand);text-decoration:none}
+header{background:var(--brand);color:#fff;padding:14px 16px 0;padding-top:calc(14px + env(safe-area-inset-top))}
+.wrap{max-width:1000px;margin:0 auto}
+.top{display:flex;align-items:center;gap:10px}
+.logo{font-weight:700;font-size:24px;letter-spacing:-.3px;cursor:pointer}
+.logo span{color:#ffd29a}
+.tag{opacity:.8;font-size:13.5px}
+.logo>span{color:#fff}
+html[lang=en] .lg-bn,html[lang=bn] .lg-en{display:none}
+.logo span span{color:#ffd29a}
+.lsw{margin-left:auto;display:flex;background:rgba(255,255,255,.14);border-radius:99px;padding:3px;flex:0 0 auto}
+.lsw button{font:inherit;font-size:13.5px;font-weight:600;border:0;background:transparent;color:#d6efe6;padding:5px 13px;border-radius:99px;cursor:pointer}
+.lsw button.on{background:#fff;color:var(--brand)}
+nav{display:flex;gap:4px;margin-top:10px}
+nav a{color:#d6efe6;padding:9px 14px;border-radius:10px 10px 0 0;font-weight:600;white-space:nowrap}
+nav a.on{background:var(--bg);color:var(--brand)}
+main{padding:16px 14px 40px}
+.search{position:relative;margin:4px 0 12px}
+.search input{width:100%;font:inherit;font-size:17px;padding:14px 16px 14px 46px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}
+.search input:focus{outline:none;border-color:#5aa58c}
+.search .ic{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:18px;opacity:.6}
+.hero{background:linear-gradient(135deg,#0f5f4a,#1b7a5f);color:#fff;border-radius:18px;padding:20px 18px;margin-bottom:14px}
+.hero h1{margin:0 0 4px;font-size:22px;line-height:1.3}
+.hero p{margin:0 0 12px;opacity:.85;font-size:14.5px}
+.hero .search{margin:0}
+.hero .search input{border-color:transparent}
+.stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:13.5px;opacity:.9}
+.stats b{font-size:18px;display:block}
+.sec{font-weight:700;color:var(--brand);margin:18px 0 8px;font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sec small{color:var(--muted);font-weight:500;font-size:13px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips.scroll{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.chip{flex:0 0 auto;font:inherit;font-size:14px;font-weight:600;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:99px;padding:6px 13px;cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.chip small{opacity:.7;font-weight:500}
+.list{display:grid;gap:8px}
+.row{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 14px;display:grid;grid-template-columns:1fr auto;gap:2px 12px;cursor:pointer;align-items:center}
+.row:hover{border-color:#a8cfc0}
+.row .n{font-weight:700;font-size:16.5px}
+.row .n small{font-weight:500;color:var(--muted);font-size:13.5px}
+.row .s{color:var(--muted);font-size:13.5px;grid-column:1}
+.row .p{grid-row:1 / span 2;grid-column:2;text-align:right;font-weight:700;font-size:16px;white-space:nowrap}
+.row .p small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.row.cur{border:2px solid var(--brand);background:#f3faf7}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:99px;padding:1px 8px;margin-left:6px;vertical-align:2px}
+.b-cheap{background:#dcfce7;color:#166534}.b-cur{background:var(--brand);color:#fff}.b-form{background:var(--chip);color:var(--brand)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
+.bh h1{margin:0;font-size:25px;line-height:1.25}
+.bh .sub{color:var(--muted);margin-top:2px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:12px}
+.fact{background:var(--bg);border-radius:12px;padding:9px 12px}
+.fact small{display:block;color:var(--muted);font-size:12px}
+.fact b{font-size:15.5px}
+.fact a{font-weight:700}
+.info h3{margin:0 0 2px;font-size:18px}
+.info .cls{color:var(--muted);font-size:13.5px;margin-bottom:8px}
+.info dl{margin:0;display:grid;gap:8px}
+.info dt{font-weight:700;font-size:14px;color:var(--brand)}
+.info dd{margin:0;font-size:15px}
+.info dd.w{background:var(--warn);border:1px solid var(--warnline);border-radius:10px;padding:6px 10px;color:#7c2d12}
+.disc{background:var(--warn);border:1px solid var(--warnline);color:#7c2d12;border-radius:12px;padding:10px 13px;font-size:13.5px;margin:12px 0}
+.empty{color:var(--muted);text-align:center;padding:26px}
+.grp{margin-bottom:6px}
+.grp>summary{list-style:none;cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:600;display:flex;justify-content:space-between;gap:8px}
+.grp>summary::-webkit-details-marker{display:none}
+.grp[open]>summary{border-radius:12px 12px 0 0;border-bottom:0}
+.grp .list{background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:8px;gap:6px}
+.grp .row{border-color:#eef1ef}
+.save{display:block;font-size:12.5px;color:#166534;font-weight:600}
+.az{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.az button{font:inherit;font-weight:700;width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+.az button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.tabs{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto}
+.more{display:flex;justify-content:center;margin-top:12px}
+.btn{font:inherit;font-weight:600;border:0;border-radius:10px;padding:10px 16px;cursor:pointer;background:var(--chip);color:var(--brand)}
+.back{display:inline-flex;align-items:center;gap:4px;font-weight:600;margin-bottom:10px;cursor:pointer;color:var(--brand);background:none;border:0;font:inherit;padding:0}
+.ft{background:#0b3d30;color:#cfe3db;margin-top:10px;font-size:14px}
+.ft a{color:#e6f3ee}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr 1.6fr;gap:26px;padding:30px 16px 18px}
+.ft h4{margin:0 0 10px;color:#fff;font-size:15px}
+.ft-col>a{display:block;padding:3px 0}
+.ft-col>a:hover{color:#ffd29a}
+.ft-about .logo{font-size:22px;color:#fff;margin-bottom:6px;cursor:default}
+.ft-about p{margin:0 0 12px;line-height:1.6;color:#b8d2c8}
+.ft-stats{display:flex;gap:14px;flex-wrap:wrap}
+.ft-stats div{background:rgba(255,255,255,.07);border-radius:10px;padding:6px 10px;font-size:12.5px}
+.ft-stats b{display:block;color:#fff;font-size:16px}
+.ft-tel{display:flex!important;gap:10px;align-items:flex-start;padding:7px 0!important;border-bottom:1px solid rgba(255,255,255,.08)}
+.ft-tel b{min-width:58px;color:#ffd29a;font-size:17px}
+.ft-tel span{font-size:13px;color:#cfe3db;line-height:1.4}
+.ft-notes{margin:0;padding-left:18px;display:grid;gap:6px;font-size:13px;line-height:1.5;color:#b8d2c8}
+.ft-src{padding:12px 16px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#9fbdb2;line-height:1.6}
+.ft-src b{color:#cfe3db}
+.page h1{margin:0 0 10px;font-size:24px}.page h3{margin:18px 0 6px;font-size:17px;color:var(--brand)}.page p,.page li{line-height:1.7}.page ul{padding-left:20px}.page .upd{color:var(--muted);font-size:13.5px;margin-top:0}
+.ckbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:#17231f;color:#e7f2ee;border-radius:14px;padding:12px 14px;display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:13.5px;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:760px;margin:0 auto}
+.ckbar a{color:#ffd29a;text-decoration:underline}.ckbar .btn{flex:0 0 auto;background:#ffd29a;color:#17231f}
+@media(max-width:700px){.ckbar{bottom:calc(70px + env(safe-area-inset-bottom))}}
+.ft-legal a{color:#cfe3db;text-decoration:underline}
+.ft-bottom{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:12px 16px 18px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#9fbdb2}
+@media(max-width:860px){.ft-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ft-grid{grid-template-columns:1fr;gap:20px;padding:24px 16px 12px}.ft-bottom{flex-direction:column}}
+.ac{position:absolute;left:0;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.12);z-index:20;max-height:70vh;overflow:auto;display:none;color:var(--ink)}
+.ac.show{display:block}
+.ac .h{font-size:12px;font-weight:700;color:var(--muted);padding:8px 14px 2px;text-transform:uppercase;letter-spacing:.4px}
+.ac .it{padding:8px 14px;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.ac .it:hover,.ac .it.sel{background:var(--chip)}
+.ac .it small{color:var(--muted)}
+@media(max-width:700px){
+  body{padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+  .tag{display:none}
+  nav{position:fixed;left:0;right:0;bottom:0;z-index:15;margin:0;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:4px 2px calc(4px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(0,0,0,.06)}
+  nav a{display:flex;flex-direction:column;align-items:center;color:var(--muted);font-size:11.5px;padding:5px 2px;border-radius:12px}
+  nav a .i{font-size:20px;line-height:1.15}
+  nav a.on{background:var(--chip);color:var(--brand)}
+  header{padding-bottom:12px}
+  .bh h1{font-size:22px}
+  .hero h1{font-size:20px}
+}
+@media(min-width:701px){nav a .i{margin-right:6px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><div class="logo" onclick="location.hash=''"><span class="lg-bn">ওষুধ<span>খুঁজি</span></span><span class="lg-en">Oshudh<span>Khuji</span></span></div><div class="tag"><span data-t>বাংলাদেশের সব ওষুধ · বিকল্প ব্র্যান্ড · দাম</span></div>
+  <div class="lsw" role="group" aria-label="Language"><button data-l="bn">বাংলা</button><button data-l="en">English</button></div></div>
+  <nav id="nav">
+    <a href="#home" data-v="home"><span class="i">🏠</span><span data-t>হোম</span></a>
+    <a href="#generics" data-v="generics"><span class="i">💊</span><span data-t>জেনেরিক</span></a>
+    <a href="#companies" data-v="companies"><span class="i">🏭</span><span data-t>কোম্পানি</span></a>
+    <a href="#classes" data-v="classes"><span class="i">🗂️</span><span data-t>শ্রেণি</span></a>
+  </nav>
+</div></header>
+<main class="wrap" id="app"><div class="empty"><span data-t>লোড হচ্ছে…</span></div></main>
+<footer class="ft">
+  <div class="wrap ft-grid">
+    <div class="ft-col ft-about">
+      <div class="logo"><span class="lg-bn">ওষুধ<span>খুঁজি</span></span><span class="lg-en">Oshudh<span>Khuji</span></span></div>
+      <p><span data-t>বাংলাদেশে পাওয়া যায় এমন ওষুধের ব্র্যান্ড, জেনেরিক, প্রস্তুতকারী কোম্পানি ও দামের একটি সহজ সার্চ ডিরেক্টরি। একই জেনেরিকের বিকল্প ব্র্যান্ড তুলনা করে সাশ্রয়ী ওষুধ খুঁজে নিন।</span></p>
+      <div class="ft-stats" id="ftStats"></div>
+    </div>
+    <div class="ft-col">
+      <h4><span data-t>দ্রুত লিংক</span></h4>
+      <a href="#home"><span data-t>হোম ও সার্চ</span></a><a href="#generics"><span data-t>জেনেরিক A–Z</span></a><a href="#companies"><span data-t>ওষুধ কোম্পানি</span></a><a href="#classes"><span data-t>ড্রাগ ক্লাস ও ধরন</span></a><a href="#about" data-t>আমাদের সম্পর্কে</a><a href="#contact" data-t>যোগাযোগ</a>
+    </div>
+    <div class="ft-col">
+      <h4><span data-t>জরুরি সহায়তা</span></h4>
+      <a class="ft-tel" href="tel:999"><b><span data-t>৯৯৯</span></b><span><span data-t>জাতীয় জরুরি সেবা — অ্যাম্বুলেন্স, দুর্ঘটনা, আগুন</span></span></a>
+      <a class="ft-tel" href="tel:16263"><b><span data-t>১৬২৬৩</span></b><span><span data-t>স্বাস্থ্য বাতায়ন — ডাক্তারের পরামর্শ (২৪ ঘণ্টা)</span></span></a>
+      <a class="ft-tel" href="https://dgda.gov.bd/" target="_blank" rel="noopener"><b>DGDA</b><span><span data-t>ওষুধের মান বা দাম নিয়ে অভিযোগ — ঔষধ প্রশাসন অধিদপ্তর ↗</span></span></a>
+    </div>
+    <div class="ft-col">
+      <h4><span data-t>ব্যবহারের আগে জানুন</span></h4>
+      <ul class="ft-notes">
+        <li><span data-t>এই সাইটের তথ্য শিক্ষা ও সচেতনতার জন্য; এটি চিকিৎসকের পরামর্শ বা প্রেসক্রিপশনের বিকল্প নয়।</span></li>
+        <li><span data-t>ডাক্তার বা রেজিস্টার্ড ফার্মাসিস্টের পরামর্শ ছাড়া ওষুধ শুরু, বন্ধ বা অন্য ব্র্যান্ডে বদলাবেন না।</span></li>
+        <li><span data-t>দাম সময়ের সাথে বদলায়; কেনার আগে ফার্মেসিতে বা প্যাকেটে লেখা সর্বোচ্চ খুচরা মূল্য (MRP) মিলিয়ে নিন।</span></li>
+        <li><span data-t>ওষুধ খাওয়ার পর শ্বাসকষ্ট, মুখ-ঠোঁট ফোলা বা তীব্র র‍্যাশ হলে দেরি না করে চিকিৎসা নিন।</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap ft-src">
+    <b><span data-t>তথ্যসূত্র:</span></b> <span data-t>ব্র্যান্ড, জেনেরিক, শক্তি, ধরন ও কোম্পানির তালিকা উন্মুক্ত ওপেন-সোর্স ডেটাসেট থেকে সংকলিত; দাম পূর্ববর্তী সংকলনের তথ্য, তাই হালনাগাদ না-ও থাকতে পারে। বাংলায় সংক্ষিপ্ত ওষুধ-পরিচিতি সাধারণ ফার্মাকোলজি তথ্যের ভিত্তিতে নিজস্বভাবে লেখা। কোনো ভুল চোখে পড়লে আমাদের জানান।</span>
+  </div>
+  <div class="wrap ft-bottom">
+    <span class="ft-legal"><a href="#about" data-t>আমাদের সম্পর্কে</a> · <a href="#privacy" data-t>গোপনীয়তা নীতি</a> · <a href="#terms" data-t>ব্যবহারের শর্তাবলি</a> · <a href="#contact" data-t>যোগাযোগ</a></span>
+    <span>© <span id="ftYear"></span> <span data-t>ওষুধখুঁজি · সর্বস্বত্ব সংরক্ষিত</span></span>
+    <span><span data-t>কোনো ওষুধ কোম্পানির সাথে সম্পর্কিত নয় · বিজ্ঞাপন কোনো ওষুধের সুপারিশ নয়</span></span>
+  </div>
+</footer>
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let LANG = 'bn'; try { LANG = localStorage.getItem('ok_lang') || 'bn'; } catch(e) {}
+const EN = {"আমাদের সম্পর্কে": "About us", "গোপনীয়তা নীতি": "Privacy policy", "ব্যবহারের শর্তাবলি": "Terms of use", "যোগাযোগ": "Contact", "বাংলাদেশের সব ওষুধ · বিকল্প ব্র্যান্ড · দাম": "All medicines in Bangladesh · Alternative brands · Prices", "হোম": "Home", "জেনেরিক": "Generics", "কোম্পানি": "Companies", "শ্রেণি": "Classes", "লোড হচ্ছে…": "Loading…", "ডেটা লোড হয়নি। আবার চেষ্টা করুন।": "Could not load data. Please try again.", "⚠️ এই তথ্য শুধু সাধারণ জ্ঞানের জন্য। ডাক্তার বা ফার্মাসিস্টের পরামর্শ ছাড়া ওষুধ শুরু, বন্ধ বা অন্য ব্র্যান্ডে বদলাবেন না।": "⚠️ This information is for general knowledge only. Do not start, stop or switch brands of any medicine without advice from a doctor or pharmacist.", "প্রতি পিস": "per piece", "দাম জানা নেই": "Price not available", "ব্র্যান্ড, জেনেরিক বা কোম্পানির নাম লিখুন (যেমন Napa, Paracetamol)": "Type a brand, generic or company name (e.g. Napa, Paracetamol)", "ব্র্যান্ড": "Brands", "কিছু পাওয়া যায়নি।": "Nothing found.", "কিছু পাওয়া যায়নি": "Nothing found", "ওষুধের নাম": "Type the medicine name", "ইংরেজিতে": "in English", "লিখুন (যেমন Napa, Seclo)।": "(e.g. Napa, Seclo).", "বানান ঠিক আছে কি না দেখুন, বা নামের প্রথম কয়েক অক্ষর লিখুন।": "Check the spelling, or type the first few letters of the name.", "যেকোনো ওষুধের সব বিকল্প ব্র্যান্ড ও দাম": "Every alternative brand and price for any medicine", "ব্র্যান্ডের নাম লিখুন — একই ওষুধ অন্য কোন কোম্পানি বানায়, দাম কত, কী কাজ করে আর পার্শ্বপ্রতিক্রিয়া কী, সব এক জায়গায়।": "Type a brand name to see which other companies make the same medicine, the prices, what it does and its side effects, all in one place.", "🕘 সম্প্রতি দেখা": "🕘 Recently viewed", "🔥 বেশি খোঁজা জেনেরিক": "🔥 Popular generics", "📦 ওষুধের ধরন": "📦 Dosage forms", "এই জেনেরিকের সংক্ষিপ্ত বাংলা তথ্য এখনো যোগ হয়নি। ডাক্তার বা ফার্মাসিস্টের কাছে জেনে নিন।": "No summary has been added for this generic yet. Please ask a doctor or pharmacist.", "ℹ️ এই কম্বিনেশনের": "ℹ️ No summary yet for this combination’s", "উপাদানের বাংলা তথ্য এখনো যোগ হয়নি; নিচে শুধু বাকি উপাদানের তথ্য দেওয়া হলো।": "component; only the other ingredients are shown below.", "💊 কী কাজে লাগে": "💊 Uses", "⚙️ কীভাবে কাজ করে": "⚙️ How it works", "⚠️ সাধারণ পার্শ্বপ্রতিক্রিয়া": "⚠️ Common side effects", "🛑 সতর্কতা": "🛑 Precautions", "– দাম ও বিকল্প ব্র্যান্ড": "– Price & alternative brands", "এই ব্র্যান্ড": "This brand", "সবচেয়ে কম দাম": "Lowest price", "কম": "cheaper", "দাম": "Price", "/ পিস": "/ piece", "জানা নেই": "Not available", "বিকল্প ব্র্যান্ড": "Alternative brands", "🔄 একই ওষুধ, অন্য কোম্পানি": "🔄 Same medicine, other companies", "এই শক্তি ও ধরনে অন্য কোনো কোম্পানির ব্র্যান্ড নেই।": "No other company makes this strength and form.", "সম্পর্কে": "About", "📦 অন্য শক্তি ও ধরন": "📦 Other strengths & forms", "সব দেখুন →": "See all →", "– সব ব্র্যান্ড, দাম, কাজ ও পার্শ্বপ্রতিক্রিয়া": "– all brands, prices, uses & side effects", "শক্তি ও ধরন": "Strengths & forms", "💊 সব ব্র্যান্ড (দাম অনুযায়ী)": "💊 All brands (by price)", "প্রতিটি শক্তি ও ধরনে আলাদা": "grouped by strength and form", "– সব ওষুধ ও দাম": "– all medicines & prices", "এই কোম্পানির ব্র্যান্ড খুঁজুন": "Search this company’s brands", "আরও দেখুন (": "Show more (", "জেনেরিক A–Z": "Generics A–Z", "জেনেরিক বা ব্র্যান্ডের নাম লিখুন": "Type a generic or brand name", "💊 জেনেরিক A–Z": "💊 Generics A–Z", "বাংলা তথ্য আছে": "Summary available", "ওষুধ কোম্পানি": "Pharmaceutical companies", "🏭 সব কোম্পানি": "🏭 All companies", "ব্র্যান্ড সংখ্যা অনুযায়ী": "by number of brands", "কোম্পানির নাম খুঁজুন": "Search company name", "ড্রাগ ক্লাস ও ওষুধের ধরন": "Drug classes & dosage forms", "🗂️ ড্রাগ ক্লাস (ওষুধের শ্রেণি)": "🗂️ Drug classes", "শ্রেণি খুঁজুন (যেমন Antibiotic, Antihistamine)": "Search classes (e.g. Antibiotic, Antihistamine)", "← সব শ্রেণি": "← All classes", "← ফিরে যান": "← Back", "পাওয়া যায়নি": "Not found", "পাতাটি পাওয়া যায়নি": "Page not found", "লিংকটি ভুল বা পুরোনো হতে পারে। নিচে খুঁজে দেখুন।": "The link may be wrong or outdated. Try searching below.", "হোমে যান": "Go home", "ওষুধখুঁজি · বাংলাদেশের ওষুধ, বিকল্প ব্র্যান্ড ও দাম": "OshudhKhuji · Bangladesh medicines, alternative brands & prices", "ওষুধ খুঁজুন": "Search medicines", "টি": "", "টি ব্র্যান্ড": " brands", "টি জেনেরিক": " generics", "বাংলাদেশে পাওয়া যায় এমন ওষুধের ব্র্যান্ড, জেনেরিক, প্রস্তুতকারী কোম্পানি ও দামের একটি সহজ সার্চ ডিরেক্টরি। একই জেনেরিকের বিকল্প ব্র্যান্ড তুলনা করে সাশ্রয়ী ওষুধ খুঁজে নিন।": "A simple search directory of medicine brands, generics, manufacturers and prices available in Bangladesh. Compare alternative brands of the same generic and find affordable options.", "দ্রুত লিংক": "Quick links", "হোম ও সার্চ": "Home & search", "ড্রাগ ক্লাস ও ধরন": "Drug classes & forms", "জরুরি সহায়তা": "Emergency help", "৯৯৯": "999", "১৬২৬৩": "16263", "জাতীয় জরুরি সেবা — অ্যাম্বুলেন্স, দুর্ঘটনা, আগুন": "National emergency service — ambulance, accident, fire", "স্বাস্থ্য বাতায়ন — ডাক্তারের পরামর্শ (২৪ ঘণ্টা)": "Shasthyo Batayon — doctor advice (24 hours)", "ওষুধের মান বা দাম নিয়ে অভিযোগ — ঔষধ প্রশাসন অধিদপ্তর ↗": "Complaints about medicine quality or price — Directorate General of Drug Administration ↗", "ব্যবহারের আগে জানুন": "Before you use this site", "এই সাইটের তথ্য শিক্ষা ও সচেতনতার জন্য; এটি চিকিৎসকের পরামর্শ বা প্রেসক্রিপশনের বিকল্প নয়।": "Information here is for education and awareness; it is not a substitute for a doctor’s advice or prescription.", "ডাক্তার বা রেজিস্টার্ড ফার্মাসিস্টের পরামর্শ ছাড়া ওষুধ শুরু, বন্ধ বা অন্য ব্র্যান্ডে বদলাবেন না।": "Do not start, stop or switch brands without advice from a doctor or registered pharmacist.", "দাম সময়ের সাথে বদলায়; কেনার আগে ফার্মেসিতে বা প্যাকেটে লেখা সর্বোচ্চ খুচরা মূল্য (MRP) মিলিয়ে নিন।": "Prices change over time; check the maximum retail price (MRP) at the pharmacy or on the pack before buying.", "ওষুধ খাওয়ার পর শ্বাসকষ্ট, মুখ-ঠোঁট ফোলা বা তীব্র র‍্যাশ হলে দেরি না করে চিকিৎসা নিন।": "If you get breathing difficulty, swelling of the face or lips, or a severe rash after a medicine, seek care immediately.", "তথ্যসূত্র:": "Sources:", "ব্র্যান্ড, জেনেরিক, শক্তি, ধরন ও কোম্পানির তালিকা উন্মুক্ত ওপেন-সোর্স ডেটাসেট থেকে সংকলিত; দাম পূর্ববর্তী সংকলনের তথ্য, তাই হালনাগাদ না-ও থাকতে পারে। বাংলায় সংক্ষিপ্ত ওষুধ-পরিচিতি সাধারণ ফার্মাকোলজি তথ্যের ভিত্তিতে নিজস্বভাবে লেখা। কোনো ভুল চোখে পড়লে আমাদের জানান।": "Brand, generic, strength, form and company lists are compiled from open-source datasets; prices come from an earlier compilation and may be out of date. Short medicine summaries are written independently from standard pharmacology. Please tell us if you spot an error.", "ওষুধখুঁজি · সর্বস্বত্ব সংরক্ষিত": "OshudhKhuji · All rights reserved", "কোনো ওষুধ কোম্পানির সাথে সম্পর্কিত নয় · বিজ্ঞাপন কোনো ওষুধের সুপারিশ নয়": "Not affiliated with any pharmaceutical company · Ads are not medicine recommendations", "📋": "📋"};
+const T = s => LANG === 'en' ? (EN[s] ?? s) : s;
+function applyStatic(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-t]').forEach(el => { if (!el.dataset.bn) el.dataset.bn = el.textContent; el.textContent = T(el.dataset.bn); });
+  document.querySelectorAll('.lsw button').forEach(b => b.classList.toggle('on', b.dataset.l === LANG));
+}
+const ftStats = () => `<div><b>${fmtN(D.B.length)}</b>${T('ব্র্যান্ড')}</div><div><b>${fmtN(D.g.length)}</b>${T('জেনেরিক')}</div><div><b>${fmtN(D.c.length)}</b>${T('কোম্পানি')}</div>`;
+const bnNum = n => LANG === 'en' ? String(n) : String(n).replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
+const fmtN = n => bnNum(Number(n).toLocaleString('en-IN'));
+const tk = v => '৳' + bnNum((v % 1 ? v.toFixed(2) : String(v)));
+const ns = s => (s || '').toLowerCase().replace(/[^a-z0-9.+/]/g, '');
+const store = { get(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch(e) { return d; } }, set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} } };
+let D, RECENT = store.get('ok_recent2', []);
+const DISC = () => `<div class="disc">${T('⚠️ এই তথ্য শুধু সাধারণ জ্ঞানের জন্য। ডাক্তার বা ফার্মাসিস্টের পরামর্শ ছাড়া ওষুধ শুরু, বন্ধ বা অন্য ব্র্যান্ডে বদলাবেন না।')}</div>`;
+const POP = ['Paracetamol','Omeprazole Magnesium','Esomeprazole Magnesium Trihydrate','Cefixime Trihydrate','Azithromycin Dihydrate','Metformin Hydrochloride','Amlodipine Besilate','Montelukast Sodium','Fexofenadine Hydrochloride','Losartan Potassium','Pantoprazole Sodium','Domperidone Maleate'];
+
+fetch('meds.json').then(r => r.json()).then(j => {
+  D = j;
+  D.B = j.b.map((b, i) => ({id:i, name:b[0], st:b[1], g:b[2], c:b[3], f:b[4], p:b[5], pu:b[6]}));
+  D.byG = Array.from({length:j.g.length}, () => []); D.byC = Array.from({length:j.c.length}, () => []);
+  D.B.forEach(b => { D.byG[b.g].push(b); D.byC[b.c].push(b); });
+  D.bs = D.B.map(b => b.name.toLowerCase());
+  D.gs = j.g.map(g => g[0].toLowerCase());
+  D.cs = j.c.map(c => c.toLowerCase());
+  const cc = {}; j.g.forEach((g, i) => { if (g[1]) cc[g[1]] = (cc[g[1]] || 0) + D.byG[i].length; }); D.clsCnt = cc;
+  D.clsList = Object.keys(cc).sort((a, b) => cc[b] - cc[a]);
+  $('#ftYear').textContent = bnNum(new Date().getFullYear());
+  $('#ftStats').innerHTML = ftStats();
+  route();
+}).catch(() => $('#app').innerHTML = `<div class="empty">${T('ডেটা লোড হয়নি। আবার চেষ্টা করুন।')}</div>`);
+window.addEventListener('hashchange', route);
+applyStatic(); cookieBar();
+document.querySelectorAll('.lsw button').forEach(b => b.onclick = () => { if (LANG === b.dataset.l) return; LANG = b.dataset.l; try { localStorage.setItem('ok_lang', LANG); } catch(e) {} applyStatic(); cookieBar();
+  if (D) { $('#ftYear').textContent = bnNum(new Date().getFullYear()); $('#ftStats').innerHTML = ftStats(); route(); } });
+document.addEventListener('click', e => { if (!e.target.closest('.search')) { const ac = document.getElementById('ac'); if (ac) ac.classList.remove('show'); } });
+
+function route(){
+  if (!D) return;
+  const h = location.hash.slice(1) || 'home';
+  const v = h.split('-')[0];
+  document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('on', a.dataset.v === v || (v === 'g' && a.dataset.v === 'generics') || (v === 'c' && a.dataset.v === 'companies')));
+  window.scrollTo(0, 0);
+  const id = +h.split('-')[1];
+  if (v === 'b' && D.B[id]) return viewBrand(D.B[id]);
+  if (v === 'g' && D.g[id]) return viewGeneric(id);
+  if (v === 'c' && D.c[id]) return viewCompany(id);
+  if (PAGES[h]) return viewPage(h);
+  if (v === 'generics') return viewGenerics();
+  if (v === 'companies') return viewCompanies();
+  if (v === 'classes') return viewClasses();
+  if (v === 'form' && D.f[id]) return viewForm(id);
+  if (v === 'cls' && D.clsList[id] != null) return viewClass(D.clsList[id]);
+  if (h !== 'home' && h !== '') { setTitle(T('পাওয়া যায়নি')); $('#app').innerHTML = `<div class="card" style="text-align:center"><div style="font-size:40px">🔎</div><h2 style="margin:6px 0">${T('পাতাটি পাওয়া যায়নি')}</h2><p style="color:var(--muted)">${T('লিংকটি ভুল বা পুরোনো হতে পারে। নিচে খুঁজে দেখুন।')}</p>${searchBox()}<button class="btn" onclick="location.hash='home'">${T('হোমে যান')}</button></div>`; bindSearch(); return; }
+  viewHome();
+}
+
+/* ---------- site config: edit these before going live ---------- */
+const SITE = {
+  name: { bn: 'ওষুধখুঁজি', en: 'OshudhKhuji' },
+  domain: '',            // e.g. 'oshudhkhuji.com'
+  email: '',             // e.g. 'contact@oshudhkhuji.com'
+  facebook: '',          // e.g. 'https://facebook.com/oshudhkhuji'
+  adsClient: '',         // AdSense publisher ID, e.g. 'ca-pub-1234567890123456'
+  updated: { bn: '২০ নভেম্বর ২০২৬', en: '20 November 2026' }
+};
+if (SITE.adsClient) { const sc = document.createElement('script'); sc.async = true; sc.crossOrigin = 'anonymous';
+  sc.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + SITE.adsClient; document.head.appendChild(sc); }
+const mail = () => SITE.email ? `<a href="mailto:${SITE.email}">${SITE.email}</a>` : (LANG === 'en' ? '<i>(email address coming soon)</i>' : '<i>(ইমেইল ঠিকানা শীঘ্রই যোগ হবে)</i>');
+const PAGES = {
+ about: { t: { bn: 'আমাদের সম্পর্কে', en: 'About us' },
+  bn: () => `<p><b>${SITE.name.bn}</b> বাংলাদেশে পাওয়া যায় এমন ওষুধের একটি স্বাধীন, বিনামূল্যের সার্চ ডিরেক্টরি। এখানে আপনি যেকোনো ব্র্যান্ডের জেনেরিক নাম, প্রস্তুতকারী কোম্পানি, শক্তি, ধরন ও দাম দেখতে পারেন, এবং একই জেনেরিকের অন্য কোম্পানির ব্র্যান্ডগুলো দামের সাথে তুলনা করতে পারেন।</p>
+   <h3>আমাদের উদ্দেশ্য</h3><p>প্রেসক্রিপশনে লেখা ওষুধটি কী, কী কাজে লাগে, আর একই ওষুধ অন্য কোন নামে কত দামে পাওয়া যায় — সাধারণ মানুষের কাছে এই তথ্য সহজ ভাষায় পৌঁছে দেওয়া, যাতে তাঁরা ডাক্তার ও ফার্মাসিস্টের সাথে ভালোভাবে কথা বলতে পারেন।</p>
+   <h3>তথ্য কোথা থেকে আসে</h3><ul><li><b>ব্র্যান্ড তালিকা:</b> ব্র্যান্ড, জেনেরিক, শক্তি, ধরন ও কোম্পানির নাম উন্মুক্ত ওপেন-সোর্স ডেটাসেট থেকে সংকলিত।</li><li><b>দাম:</b> পূর্ববর্তী সংকলিত তালিকা থেকে নেওয়া; বাজারে দাম বদলে থাকতে পারে।</li><li><b>ওষুধ-পরিচিতি:</b> প্রতিটি উপাদানের সংক্ষিপ্ত তথ্য (কাজ, কার্যপদ্ধতি, সাধারণ পার্শ্বপ্রতিক্রিয়া, সতর্কতা) প্রতিষ্ঠিত ফার্মাকোলজি জ্ঞানের ভিত্তিতে নিজস্বভাবে সহজ বাংলা ও ইংরেজিতে লেখা।</li></ul>
+   <h3>সম্পাদকীয় নীতি</h3><ul><li>আমরা কোনো ওষুধ কোম্পানির সাথে যুক্ত নই এবং কোনো ব্র্যান্ডের প্রচার করি না।</li><li>বিজ্ঞাপন দেখানো হলে তা সম্পাদকীয় তথ্যের সাথে মেশানো হয় না এবং কোনো ওষুধের সুপারিশ নয়।</li><li>ভুল জানালে আমরা যাচাই করে দ্রুত সংশোধন করি।</li></ul>
+   <div class="disc">এই সাইট চিকিৎসকের পরামর্শের বিকল্প নয়। ওষুধ শুরু, বন্ধ বা ব্র্যান্ড বদলানোর আগে অবশ্যই ডাক্তার বা রেজিস্টার্ড ফার্মাসিস্টের পরামর্শ নিন।</div>
+   <p>যোগাযোগ: ${mail()}</p>`,
+  en: () => `<p><b>${SITE.name.en}</b> is an independent, free search directory of medicines available in Bangladesh. You can look up any brand's generic name, manufacturer, strength, dosage form and price, and compare it with other companies' brands of the same generic.</p>
+   <h3>Our purpose</h3><p>To help ordinary people understand in plain language what a prescribed medicine is, what it is used for, and what other names and prices the same medicine is sold under, so they can talk to their doctor and pharmacist with confidence.</p>
+   <h3>Where the information comes from</h3><ul><li><b>Brand list:</b> brand, generic, strength, form and company names are compiled from open-source datasets.</li><li><b>Prices:</b> taken from an earlier compiled list; market prices may have changed.</li><li><b>Medicine summaries:</b> short notes on each ingredient (uses, how it works, common side effects, precautions) are written independently in plain Bangla and English from established pharmacology.</li></ul>
+   <h3>Editorial policy</h3><ul><li>We are not affiliated with any pharmaceutical company and do not promote any brand.</li><li>Any advertising is kept separate from editorial content and is not a recommendation of any medicine.</li><li>When an error is reported, we check and correct it promptly.</li></ul>
+   <div class="disc">This site is not a substitute for medical advice. Always consult a doctor or registered pharmacist before starting, stopping or switching a medicine.</div>
+   <p>Contact: ${mail()}</p>` },
+ privacy: { t: { bn: 'গোপনীয়তা নীতি', en: 'Privacy policy' },
+  bn: () => `<p class="upd">সর্বশেষ হালনাগাদ: ${SITE.updated.bn}</p>
+   <p>${SITE.name.bn} (“আমরা”) আপনার গোপনীয়তাকে গুরুত্ব দেয়। এই নীতিতে বলা হয়েছে সাইট ব্যবহারের সময় কী তথ্য সংগ্রহ হয় এবং কীভাবে ব্যবহৃত হয়।</p>
+   <h3>১. আমরা যে তথ্য সংগ্রহ করি</h3><ul><li><b>আপনি যা দেন:</b> সাইট ব্যবহারে কোনো অ্যাকাউন্ট বা ব্যক্তিগত তথ্য লাগে না। আপনি ইমেইল করলে শুধু উত্তর দেওয়ার জন্য আপনার ইমেইল ঠিকানা ও বার্তা ব্যবহার করি।</li><li><b>আপনার ডিভাইসে সংরক্ষিত:</b> ভাষা পছন্দ ও “সম্প্রতি দেখা” ওষুধের তালিকা আপনার ব্রাউজারের লোকাল স্টোরেজে থাকে; এটি আমাদের সার্ভারে পাঠানো হয় না।</li><li><b>স্বয়ংক্রিয় তথ্য:</b> অন্য ওয়েবসাইটের মতো আমাদের হোস্টিং সার্ভার IP ঠিকানা, ব্রাউজারের ধরন ও দেখা পাতার মতো সাধারণ লগ রাখতে পারে।</li></ul>
+   <h3>২. কুকি ও বিজ্ঞাপন (Google AdSense)</h3><ul><li>Google-সহ তৃতীয় পক্ষের বিক্রেতারা আপনার এই সাইট বা অন্য সাইটে আগের ভিজিটের ভিত্তিতে বিজ্ঞাপন দেখাতে কুকি ব্যবহার করে।</li><li>Google-এর বিজ্ঞাপন কুকি ব্যবহারের মাধ্যমে Google ও তার অংশীদাররা আমাদের সাইট এবং/অথবা ইন্টারনেটের অন্য সাইটে আপনার ভিজিটের ভিত্তিতে বিজ্ঞাপন দেখাতে পারে।</li><li>আপনি <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>-এ গিয়ে ব্যক্তিগতকৃত বিজ্ঞাপন বন্ধ করতে পারেন। তৃতীয় পক্ষের বিক্রেতার কুকিও <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info/choices</a>-এ গিয়ে বন্ধ করা যায়।</li><li>Google কীভাবে তথ্য ব্যবহার করে: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google-এর অংশীদার সাইট নীতি</a>।</li><li>আপনি ব্রাউজারের সেটিংস থেকেও কুকি মুছতে বা বন্ধ করতে পারেন; তাতে সাইটের কিছু সুবিধা কাজ নাও করতে পারে।</li></ul>
+   <h3>৩. তথ্যের ব্যবহার</h3><p>সংগৃহীত তথ্য সাইট চালানো, উন্নত করা, অপব্যবহার রোধ এবং বিজ্ঞাপন দেখানোর জন্য ব্যবহৃত হয়। আমরা আপনার ব্যক্তিগত তথ্য বিক্রি করি না।</p>
+   <h3>৪. শিশুদের গোপনীয়তা</h3><p>এই সাইট ১৩ বছরের কম বয়সীদের জন্য নয় এবং আমরা জেনেশুনে তাদের ব্যক্তিগত তথ্য সংগ্রহ করি না।</p>
+   <h3>৫. বাইরের লিংক</h3><p>অন্য সাইটের লিংকে গেলে সেই সাইটের নিজস্ব গোপনীয়তা নীতি প্রযোজ্য হবে।</p>
+   <h3>৬. পরিবর্তন ও যোগাযোগ</h3><p>এই নীতি সময়ে সময়ে হালনাগাদ হতে পারে; পরিবর্তন এই পাতায় প্রকাশ করা হবে। প্রশ্ন থাকলে লিখুন: ${mail()}</p>`,
+  en: () => `<p class="upd">Last updated: ${SITE.updated.en}</p>
+   <p>${SITE.name.en} (“we”) respects your privacy. This policy explains what information is collected when you use this site and how it is used.</p>
+   <h3>1. Information we collect</h3><ul><li><b>Information you provide:</b> no account or personal details are needed to use the site. If you email us, we use your address and message only to reply.</li><li><b>Stored on your device:</b> your language choice and “recently viewed” list are kept in your browser’s local storage and are not sent to our servers.</li><li><b>Automatic information:</b> like most websites, our hosting server may keep standard logs such as IP address, browser type and pages visited.</li></ul>
+   <h3>2. Cookies and advertising (Google AdSense)</h3><ul><li>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites.</li><li>Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet.</li><li>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. You can also opt out of some third-party vendors’ cookies at <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info/choices</a>.</li><li>How Google uses data: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites that use its services</a>.</li><li>You can also delete or block cookies in your browser settings; some features may then not work.</li></ul>
+   <h3>3. How we use information</h3><p>Information is used to run and improve the site, prevent abuse and show advertising. We do not sell your personal information.</p>
+   <h3>4. Children’s privacy</h3><p>This site is not directed at children under 13, and we do not knowingly collect their personal information.</p>
+   <h3>5. External links</h3><p>Other websites we link to have their own privacy policies.</p>
+   <h3>6. Changes and contact</h3><p>We may update this policy from time to time; changes will be posted on this page. Questions: ${mail()}</p>` },
+ terms: { t: { bn: 'ব্যবহারের শর্তাবলি ও দায়স্বীকার', en: 'Terms of use & medical disclaimer' },
+  bn: () => `<p class="upd">সর্বশেষ হালনাগাদ: ${SITE.updated.bn}</p>
+   <h3>১. চিকিৎসা-সংক্রান্ত দায়স্বীকার</h3><div class="disc">${SITE.name.bn}-এর সব তথ্য শুধু সাধারণ জ্ঞান ও সচেতনতার জন্য। এটি রোগনির্ণয়, চিকিৎসা বা প্রেসক্রিপশনের বিকল্প নয়। কোনো ওষুধ শুরু, বন্ধ, মাত্রা পরিবর্তন বা অন্য ব্র্যান্ডে বদলানোর আগে অবশ্যই নিবন্ধিত চিকিৎসক বা ফার্মাসিস্টের পরামর্শ নিন। জরুরি অবস্থায় ৯৯৯-এ কল করুন বা নিকটস্থ হাসপাতালে যান।</div>
+   <h3>২. তথ্যের নির্ভুলতা</h3><p>আমরা তথ্য সঠিক রাখার চেষ্টা করি, কিন্তু ওষুধের নাম, শক্তি, দাম বা প্রস্তুতকারী বদলাতে পারে এবং কিছু তথ্য পুরোনো বা অসম্পূর্ণ থাকতে পারে। কেনার আগে প্যাকেটে লেখা তথ্য ও সর্বোচ্চ খুচরা মূল্য (MRP) মিলিয়ে নিন।</p>
+   <h3>৩. “বিকল্প ব্র্যান্ড” সম্পর্কে</h3><p>একই জেনেরিক, শক্তি ও ধরনের ব্র্যান্ডগুলো এক তালিকায় দেখানো হয়। এর অর্থ এই নয় যে প্রতিটি ব্র্যান্ড সব রোগীর জন্য হুবহু বিনিময়যোগ্য; ব্র্যান্ড বদলানোর সিদ্ধান্ত চিকিৎসক বা ফার্মাসিস্টের।</p>
+   <h3>৪. দায়বদ্ধতার সীমা</h3><p>এই সাইটের তথ্য ব্যবহার করে নেওয়া কোনো সিদ্ধান্তের ফলে হওয়া ক্ষতির জন্য ${SITE.name.bn} দায়ী থাকবে না।</p>
+   <h3>৫. ট্রেডমার্ক</h3><p>সব ব্র্যান্ড নাম ও ট্রেডমার্ক তাদের নিজ নিজ মালিকের সম্পত্তি; এখানে শুধু শনাক্তকরণের জন্য উল্লেখ করা হয়েছে।</p>
+   <h3>৬. বিজ্ঞাপন</h3><p>সাইটে তৃতীয় পক্ষের বিজ্ঞাপন দেখানো হতে পারে। বিজ্ঞাপন কোনো পণ্য বা ওষুধের সুপারিশ নয়।</p>
+   <h3>৭. পরিবর্তন</h3><p>এই শর্তাবলি যেকোনো সময় হালনাগাদ হতে পারে। সাইট ব্যবহার চালিয়ে গেলে আপনি হালনাগাদ শর্ত মেনে নিচ্ছেন বলে ধরা হবে।</p>`,
+  en: () => `<p class="upd">Last updated: ${SITE.updated.en}</p>
+   <h3>1. Medical disclaimer</h3><div class="disc">All information on ${SITE.name.en} is for general knowledge and awareness only. It is not a substitute for diagnosis, treatment or a prescription. Always consult a registered doctor or pharmacist before starting, stopping, changing the dose of or switching a medicine. In an emergency call 999 or go to the nearest hospital.</div>
+   <h3>2. Accuracy</h3><p>We try to keep information correct, but names, strengths, prices or manufacturers can change and some information may be outdated or incomplete. Check the pack and its maximum retail price (MRP) before buying.</p>
+   <h3>3. About “alternative brands”</h3><p>Brands with the same generic, strength and form are listed together. This does not mean every brand is exactly interchangeable for every patient; switching brands is a decision for your doctor or pharmacist.</p>
+   <h3>4. Limitation of liability</h3><p>${SITE.name.en} is not liable for any loss arising from decisions made using information on this site.</p>
+   <h3>5. Trademarks</h3><p>All brand names and trademarks belong to their respective owners and are mentioned here for identification only.</p>
+   <h3>6. Advertising</h3><p>The site may show third-party advertising. Ads are not a recommendation of any product or medicine.</p>
+   <h3>7. Changes</h3><p>These terms may be updated at any time. Continuing to use the site means you accept the updated terms.</p>` },
+ contact: { t: { bn: 'যোগাযোগ', en: 'Contact us' },
+  bn: () => `<p>কোনো ওষুধের তথ্য বা দামে ভুল দেখলে, নতুন ব্র্যান্ড যোগ করতে চাইলে, বা যেকোনো প্রশ্ন-পরামর্শের জন্য আমাদের লিখুন।</p>
+   <div class="facts"><div class="fact"><small>ইমেইল</small><b>${mail()}</b></div>${SITE.facebook ? `<div class="fact"><small>Facebook</small><b><a href="${SITE.facebook}" target="_blank" rel="noopener">পেজ দেখুন ↗</a></b></div>` : ''}</div>
+   <h3>ভুল জানাতে যা লিখবেন</h3><ul><li>ব্র্যান্ডের নাম, শক্তি ও ধরন (যেমন Napa 500 mg Tablet)</li><li>কোন তথ্যটি ভুল এবং সঠিক তথ্য কী</li><li>সম্ভব হলে প্যাকেটের ছবি</li></ul>
+   <div class="disc">আমরা ব্যক্তিগত চিকিৎসা পরামর্শ দিই না। স্বাস্থ্য সমস্যায় চিকিৎসকের সাথে যোগাযোগ করুন; জরুরি অবস্থায় ৯৯৯-এ কল করুন।</div>`,
+  en: () => `<p>Write to us if you spot an error in a medicine’s details or price, want a new brand added, or have any question or suggestion.</p>
+   <div class="facts"><div class="fact"><small>Email</small><b>${mail()}</b></div>${SITE.facebook ? `<div class="fact"><small>Facebook</small><b><a href="${SITE.facebook}" target="_blank" rel="noopener">Visit page ↗</a></b></div>` : ''}</div>
+   <h3>When reporting an error, include</h3><ul><li>Brand name, strength and form (e.g. Napa 500 mg Tablet)</li><li>What is wrong and what is correct</li><li>A photo of the pack if possible</li></ul>
+   <div class="disc">We do not give personal medical advice. For health problems contact a doctor; in an emergency call 999.</div>` }
+};
+function viewPage(k){
+  const P = PAGES[k]; setTitle(P.t[LANG]);
+  $('#app').innerHTML = `<div class="card page"><h1>${P.t[LANG]}</h1>${P[LANG]()}</div>
+    <div class="chips">${Object.keys(PAGES).filter(x => x !== k).map(x => `<a class="chip" href="#${x}">${PAGES[x].t[LANG]}</a>`).join('')}</div>`;
+}
+function cookieBar(){
+  let ok = false; try { ok = localStorage.getItem('ok_cookie') === '1'; } catch(e) {}
+  const old = document.getElementById('ckbar'); if (old) old.remove();
+  if (ok) return;
+  const d = document.createElement('div'); d.id = 'ckbar'; d.className = 'ckbar';
+  d.innerHTML = LANG === 'en' ? `<span>We use cookies, including Google advertising cookies, to show ads and improve the site. <a href="#privacy">Privacy policy</a></span><button class="btn">OK</button>`
+    : `<span>আমরা বিজ্ঞাপন দেখাতে ও সাইট উন্নত করতে কুকি (Google-এর বিজ্ঞাপন কুকিসহ) ব্যবহার করি। <a href="#privacy">গোপনীয়তা নীতি</a></span><button class="btn">ঠিক আছে</button>`;
+  d.querySelector('button').onclick = () => { try { localStorage.setItem('ok_cookie', '1'); } catch(e) {} d.remove(); };
+  document.body.appendChild(d);
+}
+
+/* ---------- helpers ---------- */
+const priceHTML = b => b.p != null ? `${tk(b.p)}<small>${b.pu === 'একক' ? T('প্রতি পিস') : esc(b.pu)}</small>` : `<small>${T('দাম জানা নেই')}</small>`;
+const brandRow = (b, extra = '') => `<div class="row" data-b="${b.id}"><div class="n">${esc(b.name)} <small>${stTxt(b.st)}</small>${extra}</div>
+  <div class="s">${esc(D.f[b.f])} · ${esc(D.c[b.c])}</div><div class="p">${priceHTML(b)}</div></div>`;
+const bindRows = el => el.addEventListener('click', e => {
+  const r = e.target.closest('[data-b]'); if (r) { location.hash = 'b-' + r.dataset.b; return; }
+  const g = e.target.closest('[data-g]'); if (g) { location.hash = 'g-' + g.dataset.g; return; }
+  const c = e.target.closest('[data-c]'); if (c) { location.hash = 'c-' + c.dataset.c; } });
+const hasInfo = gi => D.g[gi][3].some(Boolean);
+const stTxt = st => st ? esc(st) : '';
+const setTitle = t => document.title = (t ? t + ' – ' : '') + T('ওষুধখুঁজি · বাংলাদেশের ওষুধ, বিকল্প ব্র্যান্ড ও দাম');
+const byPrice = (a, b) => (a.p ?? 1e9) - (b.p ?? 1e9) || a.name.localeCompare(b.name);
+function searchBox(ph){ return `<div class="search"><span class="ic">🔍</span><input id="q" type="search" autocomplete="off" aria-label="${T('ওষুধ খুঁজুন')}" placeholder="${esc(ph || T('ব্র্যান্ড, জেনেরিক বা কোম্পানির নাম লিখুন (যেমন Napa, Paracetamol)'))}"><div class="ac" id="ac"></div></div>`; }
+function bindSearch(){
+  const q = $('#q'), ac = $('#ac'); let sel = -1;
+  const run = () => {
+    const s = q.value.trim().toLowerCase(); sel = -1;
+    if (s.length < 2) { ac.classList.remove('show'); return; }
+    const pick = (arr, max) => { const st = [], inc = []; for (let i = 0; i < arr.length && st.length < max; i++) { const v = arr[i]; if (v.startsWith(s)) st.push(i); else if (inc.length < max && v.includes(s)) inc.push(i); } return st.concat(inc).slice(0, max); };
+    const FR = f => { const n = D.f[f]; return n === 'Tablet' ? 0 : n === 'Capsule' ? 1 : /Syrup|Suspension/.test(n) ? 2 : /Injection|Infusion/.test(n) ? 4 : 3; };
+    const bi = pick(D.bs, 40).sort((a, b) => (D.bs[a] !== s) - (D.bs[b] !== s) || D.bs[a].length - D.bs[b].length || FR(D.B[a].f) - FR(D.B[b].f)).slice(0, 12), gi = pick(D.gs, 6), ci = pick(D.cs, 4);
+    let h = '';
+    if (bi.length) h += `<div class="h">${T('ব্র্যান্ড')}</div>` + bi.map(i => { const b = D.B[i]; return `<div class="it" data-b="${i}"><span><b>${esc(b.name)}</b> ${esc(b.st)} <small>${esc(D.f[b.f])}</small></span><small>${esc(D.c[b.c].replace(/ (Limited|Ltd\.?|Pharmaceuticals?|Laboratories)\b.*$/i, ''))}</small></div>`; }).join('');
+    if (gi.length) h += `<div class="h">${T('জেনেরিক')}</div>` + gi.map(i => `<div class="it" data-g="${i}"><span>${esc(D.g[i][0])}</span><small>${fmtN(D.byG[i].length)}${T('টি ব্র্যান্ড')}</small></div>`).join('');
+    if (ci.length) h += `<div class="h">${T('কোম্পানি')}</div>` + ci.map(i => `<div class="it" data-c="${i}"><span>${esc(D.c[i])}</span><small>${fmtN(D.byC[i].length)}${T('টি')}</small></div>`).join('');
+    ac.innerHTML = h || `<div class="empty">${T('কিছু পাওয়া যায়নি।')}${/[\u0980-\u09FF]/.test(s) ? `<br>${T('ওষুধের নাম')} <b>${T('ইংরেজিতে')}</b> ${T('লিখুন (যেমন Napa, Seclo)।')}` : `<br>${T('বানান ঠিক আছে কি না দেখুন, বা নামের প্রথম কয়েক অক্ষর লিখুন।')}`}</div>`; ac.classList.add('show');
+  };
+  q.addEventListener('input', run);
+  q.addEventListener('keydown', e => { const its = ac.querySelectorAll('.it'); if (!its.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); sel = (sel + (e.key === 'ArrowDown' ? 1 : -1) + its.length) % its.length; its.forEach((x, k) => x.classList.toggle('sel', k === sel)); }
+    if (e.key === 'Enter') its[Math.max(sel, 0)].click(); });
+  ac.addEventListener('click', e => { const it = e.target.closest('.it'); if (!it) return; ac.classList.remove('show');
+    location.hash = it.dataset.b ? 'b-' + it.dataset.b : it.dataset.g ? 'g-' + it.dataset.g : 'c-' + it.dataset.c; });
+}
+
+/* ---------- home ---------- */
+function viewHome(){
+  setTitle('');
+  const pops = POP.map(n => D.g.findIndex(g => g[0] === n)).filter(i => i >= 0);
+  const rec = RECENT.map(i => D.B[i]).filter(Boolean);
+  $('#app').innerHTML = `<div class="hero"><h1>${T('যেকোনো ওষুধের সব বিকল্প ব্র্যান্ড ও দাম')}</h1>
+    <p>${T('ব্র্যান্ডের নাম লিখুন — একই ওষুধ অন্য কোন কোম্পানি বানায়, দাম কত, কী কাজ করে আর পার্শ্বপ্রতিক্রিয়া কী, সব এক জায়গায়।')}</p>
+    ${searchBox()}
+    <div class="stats"><div><b>${fmtN(D.B.length)}</b>${T('ব্র্যান্ড')}</div><div><b>${fmtN(D.g.length)}</b>${T('জেনেরিক')}</div><div><b>${fmtN(D.c.length)}</b>${T('কোম্পানি')}</div></div></div>
+    ${rec.length ? `<div class="sec">${T('🕘 সম্প্রতি দেখা')}</div><div class="chips scroll" id="rec">${rec.map(b => `<button class="chip" data-b="${b.id}">${esc(b.name)} <small>${esc(b.st)}</small></button>`).join('')}</div>` : ''}
+    <div class="sec">${T('🔥 বেশি খোঁজা জেনেরিক')}</div>
+    <div class="chips" id="pop">${pops.map(i => `<button class="chip" data-g="${i}">${esc(D.g[i][0].split(' ')[0])} <small>${fmtN(D.byG[i].length)}</small></button>`).join('')}</div>
+    <div class="sec">${T('📦 ওষুধের ধরন')}</div>
+    <div class="chips" id="forms">${topForms(10).map(i => `<button class="chip" data-f="${i}">${esc(D.f[i])}</button>`).join('')}</div>
+    ${DISC()}`;
+  bindSearch(); bindRows($('#app'));
+  $('#forms').onclick = e => { const b = e.target.closest('[data-f]'); if (b) location.hash = 'form-' + b.dataset.f; };
+}
+function topForms(n){ const c = D.f.map(() => 0); D.B.forEach(b => c[b.f]++); return D.f.map((_, i) => i).sort((a, b) => c[b] - c[a]).slice(0, n); }
+
+/* ---------- brand ---------- */
+function infoCards(gi){
+  const aligned = D.g[gi][3], ings = D.g[gi][0].split(' + ');
+  const keys = [...new Set(aligned.filter(Boolean))];
+  const missing = ings.filter((_, i) => !aligned[i]);
+  const note = keys.length && missing.length ? `<div class="disc" style="background:#f1f5f9;border-color:#e2e8f0;color:#475569">${T('ℹ️ এই কম্বিনেশনের')} ${missing.map(esc).join(', ')} ${T('উপাদানের বাংলা তথ্য এখনো যোগ হয়নি; নিচে শুধু বাকি উপাদানের তথ্য দেওয়া হলো।')}</div>` : '';
+  if (!keys.length) return `<div class="card info"><div class="cls">${esc(D.g[gi][1] || '')}</div><div class="empty" style="padding:8px">${T('এই জেনেরিকের সংক্ষিপ্ত বাংলা তথ্য এখনো যোগ হয়নি। ডাক্তার বা ফার্মাসিস্টের কাছে জেনে নিন।')}</div></div>`;
+  return note + keys.map(k => { const [cls, use, how, se, w] = LANG === 'en' && D.ie && D.ie[k] ? D.ie[k] : D.i[k];
+    return `<div class="card info"><h3>${esc(ings.length === 1 ? D.g[gi][0] : ings[aligned.indexOf(k)])}</h3><div class="cls">${esc(cls)}${D.g[gi][1] && ings.length === 1 ? ' · ' + esc(D.g[gi][1]) : ''}</div>
+    <dl><dt>${T('💊 কী কাজে লাগে')}</dt><dd>${esc(use)}</dd><dt>${T('⚙️ কীভাবে কাজ করে')}</dt><dd>${esc(how)}</dd><dt>${T('⚠️ সাধারণ পার্শ্বপ্রতিক্রিয়া')}</dt><dd>${esc(se)}</dd><dt>${T('🛑 সতর্কতা')}</dt><dd class="w">${esc(w)}</dd></dl></div>`; }).join('');
+}
+function viewBrand(b){
+  setTitle(`${b.name} ${b.st} ${D.f[b.f]} ${T('– দাম ও বিকল্প ব্র্যান্ড')}`);
+  RECENT = [b.id, ...RECENT.filter(x => x !== b.id)].slice(0, 12); store.set('ok_recent2', RECENT);
+  const same = D.byG[b.g].filter(x => x.f === b.f && ns(x.st) === ns(b.st)).sort(byPrice);
+  const cheapest = same.find(x => x.p != null);
+  const others = {}; D.byG[b.g].forEach(x => { if (!(x.f === b.f && ns(x.st) === ns(b.st))) { const k = D.f[x.f] + (x.st ? ' · ' + x.st : ''); (others[k] = others[k] || []).push(x); } });
+  const altRows = same.map(x => brandRow(x, (x.id === b.id ? `<span class="badge b-cur">${T('এই ব্র্যান্ড')}</span>` : '') + (cheapest && x.id === cheapest.id ? `<span class="badge b-cheap">${T('সবচেয়ে কম দাম')}</span>` : '') +
+     (x.id !== b.id && b.p != null && x.p != null && x.p < b.p ? `<div class="save">৳${bnNum((b.p - x.p).toFixed(2))} ${T('কম')}</div>` : ''))).join('').replace(`data-b="${b.id}"`, `data-b="${b.id}" data-cur`);
+  $('#app').innerHTML = `${searchBox()}
+    <div class="card bh"><h1>${esc(b.name)} <span class="badge b-form">${esc(D.f[b.f])}</span></h1>
+      <div class="sub">${b.st ? esc(b.st) : esc(D.f[b.f])}</div>
+      <div class="facts">
+        <div class="fact"><small>${LANG === 'en' ? 'Generic' : 'জেনেরিক'}</small><a data-g="${b.g}" href="#g-${b.g}">${esc(D.g[b.g][0])}</a></div>
+        <div class="fact"><small>${LANG === 'en' ? 'Company' : 'কোম্পানি'}</small><a data-c="${b.c}" href="#c-${b.c}">${esc(D.c[b.c])}</a></div>
+        <div class="fact"><small>${T('দাম')}</small><b>${b.p != null ? tk(b.p) + ' ' + (b.pu === 'একক' ? T('/ পিস') : '/ ' + esc(b.pu)) : T('জানা নেই')}</b></div>
+        <div class="fact"><small>${T('বিকল্প ব্র্যান্ড')}</small><b>${fmtN(same.length - 1)}${T('টি')}</b></div>
+      </div></div>
+    <div class="sec">${T('🔄 একই ওষুধ, অন্য কোম্পানি')} <small>${esc(D.g[b.g][0])} ${stTxt(b.st)} · ${esc(D.f[b.f])}</small></div>
+    ${same.length > 1 ? `<div class="list" id="alts">${altRows}</div>${same.length > 12 ? `<div class="more"><button class="btn" id="altMore">${LANG === 'en' ? 'Show all ' + same.length + ' brands' : 'সব ' + fmtN(same.length) + 'টি ব্র্যান্ড দেখুন'}</button></div>` : ''}` : `<div class="empty">${T('এই শক্তি ও ধরনে অন্য কোনো কোম্পানির ব্র্যান্ড নেই।')}</div>`}
+    ${DISC()}
+    <div class="sec">📋 ${LANG === 'en' ? 'About ' + esc(D.g[b.g][0]) : esc(D.g[b.g][0]) + ' সম্পর্কে'}</div>
+    ${infoCards(b.g)}
+    ${Object.keys(others).length ? `<div class="sec">${T('📦 অন্য শক্তি ও ধরন')} <small><a href="#g-${b.g}">${T('সব দেখুন →')}</a></small></div><div class="chips">${Object.entries(others).slice(0, 14).map(([k, arr]) => `<button class="chip" data-b="${arr.sort(byPrice)[0].id}">${esc(k)} <small>${fmtN(arr.length)}</small></button>`).join('')}</div>` : ''}`;
+  const cur = document.querySelector('[data-cur]'); if (cur) cur.classList.add('cur');
+  const rows = [...document.querySelectorAll('#alts .row')];
+  if (rows.length > 12) { rows.forEach((r, i) => { if (i >= 12 && !r.classList.contains('cur')) r.hidden = true; });
+    $('#altMore').onclick = e => { rows.forEach(r => r.hidden = false); e.target.parentNode.remove(); }; }
+  bindSearch(); bindRows($('#app'));
+}
+
+/* ---------- generic ---------- */
+function viewGeneric(gi){
+  setTitle(`${D.g[gi][0]} ${T('– সব ব্র্যান্ড, দাম, কাজ ও পার্শ্বপ্রতিক্রিয়া')}`);
+  const all = D.byG[gi]; const groups = {};
+  all.forEach(x => { const k = D.f[x.f] + '|' + x.st; (groups[k] = groups[k] || []).push(x); });
+  const keys = Object.keys(groups).sort((a, b) => groups[b].length - groups[a].length);
+  const comps = new Set(all.map(x => x.c)).size;
+  $('#app').innerHTML = `${searchBox()}
+    <div class="card bh"><h1>${esc(D.g[gi][0])}</h1><div class="sub">${esc(D.g[gi][1] || T('জেনেরিক'))}</div>
+      <div class="facts"><div class="fact"><small>${T('ব্র্যান্ড')}</small><b>${fmtN(all.length)}${T('টি')}</b></div><div class="fact"><small>${T('কোম্পানি')}</small><b>${fmtN(comps)}${T('টি')}</b></div><div class="fact"><small>${T('শক্তি ও ধরন')}</small><b>${fmtN(keys.length)}${T('টি')}</b></div></div></div>
+    ${infoCards(gi)}
+    ${DISC()}
+    <div class="sec">${T('💊 সব ব্র্যান্ড (দাম অনুযায়ী)')} <small>${T('প্রতিটি শক্তি ও ধরনে আলাদা')}</small></div>
+    ${keys.map((k, n) => { const [f, s] = k.split('|'); const arr = groups[k].sort(byPrice); const lo = arr.find(x => x.p != null), hi = [...arr].reverse().find(x => x.p != null);
+      return `<details class="grp"${n < 2 ? ' open' : ''}><summary><span>${esc(f)}${s ? ' · ' + esc(s) : ''}</span><small style="color:var(--muted);font-weight:500">${fmtN(arr.length)}${T('টি')}${lo ? ' · ' + tk(lo.p) + (hi && hi.p !== lo.p ? '–' + tk(hi.p) : '') : ''}</small></summary>
+        <div class="list">${arr.map((x, i) => brandRow(x, lo && x.id === lo.id ? `<span class="badge b-cheap">${T('সবচেয়ে কম দাম')}</span>` : '')).join('')}</div></details>`; }).join('')}`;
+  bindSearch(); bindRows($('#app'));
+}
+
+/* ---------- company ---------- */
+function viewCompany(ci){
+  setTitle(`${D.c[ci]} ${T('– সব ওষুধ ও দাম')}`);
+  const all = D.byC[ci].slice().sort((a, b) => a.name.localeCompare(b.name));
+  const gens = new Set(all.map(x => x.g)).size;
+  $('#app').innerHTML = `<div class="card bh"><h1>${esc(D.c[ci])}</h1>
+      <div class="facts"><div class="fact"><small>${T('ব্র্যান্ড')}</small><b>${fmtN(all.length)}${T('টি')}</b></div><div class="fact"><small>${T('জেনেরিক')}</small><b>${fmtN(gens)}${T('টি')}</b></div></div></div>
+    <div class="search"><span class="ic">🔍</span><input id="cq" type="search" placeholder="${T('এই কোম্পানির ব্র্যান্ড খুঁজুন')}"></div>
+    <div class="list" id="cl"></div><div class="more" id="cm"></div>`;
+  let shown = 60;
+  const draw = () => { const s = $('#cq').value.trim().toLowerCase();
+    const r = s ? all.filter(x => x.name.toLowerCase().includes(s) || D.gs[x.g].includes(s)) : all;
+    $('#cl').innerHTML = r.slice(0, shown).map(x => brandRow(x, `<div class="s" style="font-size:12.5px">${esc(D.g[x.g][0])}</div>`)).join('') || `<div class="empty">${T('কিছু পাওয়া যায়নি')}</div>`;
+    $('#cm').innerHTML = r.length > shown ? `<button class="btn">${T('আরও দেখুন (')}${fmtN(r.length - shown)})</button>` : '';
+    const m = $('#cm button'); if (m) m.onclick = () => { shown += 120; draw(); }; };
+  $('#cq').oninput = () => { shown = 60; draw(); }; draw(); bindRows($('#app'));
+}
+
+/* ---------- lists ---------- */
+let gLetter = 'A';
+function viewGenerics(){
+  setTitle(T('জেনেরিক A–Z'));
+  const L1 = n => /[A-Z]/.test(n[0].toUpperCase()) ? n[0].toUpperCase() : '#';
+  const letters = [...new Set(D.g.map(g => L1(g[0])))].sort((a, b) => a === '#' ? 1 : b === '#' ? -1 : a.localeCompare(b));
+  $('#app').innerHTML = `${searchBox(T('জেনেরিক বা ব্র্যান্ডের নাম লিখুন'))}<div class="sec">${T('💊 জেনেরিক A–Z')}</div><div class="az" id="az">${letters.map(l => `<button class="${l === gLetter ? 'on' : ''}">${l}</button>`).join('')}</div><div class="list" id="gl"></div>`;
+  const draw = () => { const idx = D.g.map((g, i) => i).filter(i => L1(D.g[i][0]) === gLetter).sort((a, b) => D.g[a][0].localeCompare(D.g[b][0]));
+    $('#gl').innerHTML = idx.map(i => `<div class="row" data-g="${i}"><div class="n">${esc(D.g[i][0])}</div><div class="s">${esc(D.g[i][1] || '')}${hasInfo(i) ? ` · <span style="color:var(--brand)">${T('বাংলা তথ্য আছে')}</span>` : ''}</div><div class="p">${fmtN(D.byG[i].length)}<small>${T('ব্র্যান্ড')}</small></div></div>`).join(''); };
+  $('#az').onclick = e => { const b = e.target.closest('button'); if (!b) return; gLetter = b.textContent; document.querySelectorAll('#az button').forEach(x => x.classList.toggle('on', x === b)); draw(); };
+  draw(); bindSearch(); bindRows($('#app'));
+}
+function viewCompanies(){
+  setTitle(T('ওষুধ কোম্পানি'));
+  const idx = D.c.map((_, i) => i).sort((a, b) => D.byC[b].length - D.byC[a].length);
+  $('#app').innerHTML = `<div class="sec">${T('🏭 সব কোম্পানি')} <small>${T('ব্র্যান্ড সংখ্যা অনুযায়ী')}</small></div><div class="search"><span class="ic">🔍</span><input id="fq" type="search" placeholder="${T('কোম্পানির নাম খুঁজুন')}"></div><div class="list" id="cl"></div>`;
+  const draw = () => { const s = $('#fq').value.trim().toLowerCase();
+    $('#cl').innerHTML = idx.filter(i => !s || D.cs[i].includes(s)).map(i => `<div class="row" data-c="${i}"><div class="n">${esc(D.c[i])}</div><div class="s">${fmtN(new Set(D.byC[i].map(x => x.g)).size)}${T('টি জেনেরিক')}</div><div class="p">${fmtN(D.byC[i].length)}<small>${T('ব্র্যান্ড')}</small></div></div>`).join(''); };
+  $('#fq').oninput = draw; draw(); bindRows($('#app'));
+}
+function viewClasses(){
+  setTitle(T('ড্রাগ ক্লাস ও ওষুধের ধরন'));
+  const cnt = D.clsCnt;
+  const cls = D.clsList;
+  $('#app').innerHTML = `<div class="sec">${T('📦 ওষুধের ধরন')}</div><div class="chips" id="forms">${topForms(24).map(i => `<button class="chip" data-f="${i}">${esc(D.f[i])}</button>`).join('')}</div>
+    <div class="sec">${T('🗂️ ড্রাগ ক্লাস (ওষুধের শ্রেণি)')} <small>${fmtN(cls.length)}${T('টি')}</small></div>
+    <div class="search"><span class="ic">🔍</span><input id="kq" type="search" placeholder="${T('শ্রেণি খুঁজুন (যেমন Antibiotic, Antihistamine)')}"></div><div class="list" id="kl"></div>`;
+  const draw = () => { const s = $('#kq').value.trim().toLowerCase();
+    $('#kl').innerHTML = cls.filter(c => !s || c.toLowerCase().includes(s)).slice(0, 200).map(c => `<div class="row" data-k="${D.clsList.indexOf(c)}"><div class="n">${esc(c)}</div><div class="p">${fmtN(cnt[c])}<small>${T('ব্র্যান্ড')}</small></div></div>`).join(''); };
+  $('#kq').oninput = draw; draw();
+  $('#kl').onclick = e => { const r = e.target.closest('[data-k]'); if (r) location.hash = 'cls-' + r.dataset.k; };
+  $('#forms').onclick = e => { const b = e.target.closest('[data-f]'); if (b) location.hash = 'form-' + b.dataset.f; };
+}
+function viewClass(c){
+  setTitle(c);
+  const gs = D.g.map((g, i) => i).filter(i => D.g[i][1] === c).sort((a, b) => D.byG[b].length - D.byG[a].length);
+  $('#app').innerHTML = `<button class="back" onclick="location.hash='classes'">${T('← সব শ্রেণি')}</button><div class="card bh"><h1>${esc(c)}</h1><div class="sub">${fmtN(gs.length)}${T('টি জেনেরিক')}</div></div>
+    <div class="list">${gs.map(i => `<div class="row" data-g="${i}"><div class="n">${esc(D.g[i][0])}</div><div class="s">${hasInfo(i) ? `<span style="color:var(--brand)">${T('বাংলা তথ্য আছে')}</span>` : ''}</div><div class="p">${fmtN(D.byG[i].length)}<small>${T('ব্র্যান্ড')}</small></div></div>`).join('')}</div>`;
+  bindRows($('#app'));
+}
+function viewForm(fi){
+  setTitle(D.f[fi]);
+  const gs = {}; D.B.forEach(b => { if (b.f === fi) gs[b.g] = (gs[b.g] || 0) + 1; });
+  const idx = Object.keys(gs).map(Number).sort((a, b) => gs[b] - gs[a]);
+  $('#app').innerHTML = `<button class="back" onclick="history.back()">${T('← ফিরে যান')}</button><div class="card bh"><h1>${esc(D.f[fi])}</h1><div class="sub">${fmtN(idx.length)}${T('টি জেনেরিক')}</div></div>
+    <div class="list">${idx.slice(0, 300).map(i => `<div class="row" data-g="${i}"><div class="n">${esc(D.g[i][0])}</div><div class="p">${fmtN(gs[i])}<small>${T('ব্র্যান্ড')}</small></div></div>`).join('')}</div>`;
+  bindRows($('#app'));
+}
+</script>
+</body>
+</html>
